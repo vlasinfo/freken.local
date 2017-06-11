@@ -46,21 +46,30 @@
 							<div class="row">
 								<div class="col col-50">
 
-									<div class="slider-description" data-animation-in="fadeIn">
-										<div class="cat-name">Robots</div>
-										<h2>Ozobot</h2>
+									<div class="slider-description">
+										<div class="cat-name"><a href="#">Robots</a></div>
+										<h2 class="product-name">Ozobot</h2>
 									</div>
 
-									<div class="slider-content">
+									<div class="slider-content" data-animation-in="fadeIn">
+										<div class="product-desc">
 										<p>Följande ingar</p>
 										<p>1 Ozobot</p>
 										<p>2st fria appar samt webbresurser</p>
-
-										<ul class="poduct-actions">
-											<li><div class="btn product-price">690 kr<span>+ tax</span></div></li>
-											<li><a href="#" class="cart"><img src="img/cart.svg" alt="cart"></a></li>
-											<li></li>
-										</ul>
+									</div>
+										<div class="poduct-actions">
+											<div class="action-wrap">
+												<div class="product-price">690 kr<span>+ tax</span></div>
+											</div>
+											<div class="action-wrap">
+												<a href="#" class="btn btn-cart" tooltip="Click to buy!">
+													<img src="img/cart.svg" alt="cart">
+												</a>
+											</div>
+											<div class="action-wrap">
+												<a href="#" class="btn btn-more">More info</a>
+											</div>
+										</div>
 									</div>
 								</div>
 								<div class="col col-50">
@@ -71,13 +80,40 @@
 							</div>
 						</div>
 						<div class="slick-item">
+							<div class="row">
+								<div class="col col-50">
 
-							<div class="slider-headline" data-animation-in="bounceInDown">
-								<h1>Headline FadeIn</h1>
-							</div>
+									<div class="slider-description">
+										<div class="cat-name"><a href="#">Digital games</a></div>
+										<h2 class="product-name">Bloxels</h2>
+									</div>
 
-							<div class="slider-description" data-animation-in="fadeIn">
-								<h3>Slide 2</h3>
+									<div class="slider-content" data-animation-in="fadeIn">
+										<div class="product-desc">
+											<p>Möt Bloxels®, Det första i sitt slag, en teknik som gör att du kan bygga, fånga, design, spela och dela dina egna videospel. Utformad med hjälp av block. Bloxels odlar fantasi och samtidigt uppmuntra upptäckt och experimenterande…
+											<br>Möt Bloxels®, Det första i sitt slag, en teknik som gör att du kan bygga
+											<br>Möt Bloxels®, Det första i sitt slag, en teknik som gör att du kan bygga</p>
+										</div>
+										<div class="poduct-actions">
+											<div class="action-wrap">
+												<div class="product-price">690 kr<span>+ tax</span></div>
+											</div>
+											<div class="action-wrap">
+												<a href="#" class="btn btn-cart" tooltip="Click to buy!">
+													<img src="img/cart.svg" alt="cart">
+												</a>
+											</div>
+											<div class="action-wrap">
+												<a href="#" class="btn btn-more">More info</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col col-50">
+									<div class=" slider-prod-img" data-animation-in="bounceInRight">
+										<img src="img/slider/bloxels.png" alt="bloxels">
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -101,11 +137,11 @@
 	$(document).ready(function () {
 
 		sliderInit.slick({
-			autoplay: false,
+			autoplay: true,
 			arrows: false,
 			dots: true,
-			swipe: false,
-			autoplaySpeed: 9000
+			swipe: true,
+			autoplaySpeed: 5000
 		});
 
 		sliderInit.slickAnimation();

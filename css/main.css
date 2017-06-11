@@ -8,7 +8,7 @@
 }
 
 @font-face {
-	font-family: 'Solomon Bold';
+	font-family: 'Solomon';
 	src: url('../fonts/Solomon-Bold.eot?') format('eot'),
 	url('../fonts/Solomon-Bold.woff') format('woff'),
 	url('../fonts/Solomon-Bold.ttf')  format('truetype'),
@@ -34,6 +34,10 @@ body {
 
 h1, h2, h3 {
 	margin: 0;
+}
+
+p {
+	margin: 10px 0;
 }
 
 .container {
@@ -78,7 +82,8 @@ h1, h2, h3 {
 }
 
 button:focus,
-.slick-slider-init:focus {
+.slick-slider-init:focus,
+a:focus {
 	outline: none !important;
 }
 
@@ -149,7 +154,12 @@ header {
 	color: #e22466;
 	font-size: 16px;
 	font-weight: 600;
-	margin-bottom: 30px;
+	margin: 0 auto 30px auto;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 100%;
+	-webkit-animation: typing 3s steps(26, end), caret 0.9s step-end infinite;
+	animation: typing 3s steps(26, end), caret 0.9s step-end infinite;
 }
 
 /* Navigation */
@@ -202,14 +212,52 @@ nav ul li a:focus span {
 /* End Navigation */
 
 .block {
-	padding: 20px;
+	padding: 50px 40px 30px 40px;
 	background-color: white;
-	border: 2px solid #eeeeee;
+	border: 1px solid #eeeeee;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
+	box-shadow: 0 32px 34px 0 rgba(0, 0, 0, 0.06);
 }
 
+.cat-name a {
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #9b9b9b;
+	text-decoration: none;
+}
+.cat-name a:hover {
+	text-decoration: underline;
+}
+.product-name {
+	font-size: 46px;
+	font-weight: 900;
+	color: #e32466;
+	text-transform: uppercase;
+}
+
+.product-desc {
+	font-size: 21px;
+	font-weight: bold;
+	color: #4a4a4a;
+	max-height: 208px;
+	overflow: hidden;
+	position: relative;
+}
+
+.product-desc:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 9px;
+	-moz-box-shadow: inset 0 -9px 9px -4px rgba(255,255,255,1);
+	-webkit-box-shadow: inset 0 -9px 9px -4px rgba(255,255,255,1);
+	box-shadow: inset 0 -9px 9px -4px rgba(255,255,255,1)
+}
 /* Slider */
 /* slick */
 .slick-slider {
@@ -344,20 +392,38 @@ ul.slick-dots li.slick-active button {
 /* End Slider */
 
 /*Btns*/
-ul.poduct-actions {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-ul.poduct-actions li {
-	display: inline-block;
+.poduct-actions {
+	position: absolute;
+	bottom: 20px;
+	background-color: #ffffff;
 }
 
+.product-price,
 .btn {
 	position: relative;
-	font-weight: 900;
+	font-size: 18px;
+	font-weight: 600;
+	padding: 10px 24px;
 	border-radius: 6px;
-	padding: 8px 16px;
+	display: block;
+	text-decoration: none;
+	transition: all 0.3s ease 0s;
+
+}
+.btn:hover {
+	opacity: 0.8;
+	box-shadow: 0 6px 14px 0 rgba(113, 215, 135, 0.75)
+	-webkit-transform: translate(0, -1px);
+	-moz-transform: translate(0, -1px);
+	-o-transform: translate(0, -1px);
+	transform: translate(0, -1px);
+}
+.btn:active {
+	box-shadow: 0 3px 14px 0 rgba(113, 215, 135, 0.75)
+	-webkit-transform: translate(0, 1px);
+	-moz-transform: translate(0, 1px);
+	-o-transform: translate(0, 1px);
+	transform: translate(0, 1px);
 }
 .product-price {
 	background-color: rgba(113,214,135,0.2);
@@ -370,14 +436,154 @@ ul.poduct-actions li {
 	font-weight: 300;
 	margin-top: 10px;
 }
-.cart {
-	background: #71d687;
+
+.action-wrap {
+	float: left;
+	margin-right: 20px;
 }
-.cart img {
+
+.action-wrap:last-child {
+	margin-right: 0;
+}
+
+.btn-cart {
+	background: #71d687;
+	padding: 10px;
+	box-shadow: 0 5px 14px 0 rgba(113, 215, 135, 0.75);
+}
+
+.btn-cart img {
 	display: inherit;
+	width: 20px;
+	height: 20px;
+}
+
+.btn-more {
+	font-weight: 600;
+	color: #ffffff;
+	background-color: #161aa9;
+	text-transform: uppercase;
+	box-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.25);
 }
 /*End Btns*/
 
+/*Tooltips*/
+[tooltip] {
+	position: relative; /* opinion 1 */
+}
+
+/* Applies to all tooltips */
+[tooltip]::before,
+[tooltip]::after {
+	text-transform: none; /* opinion 2 */
+	font-size: 14px; /* opinion 3 */
+	line-height: 1;
+	user-select: none;
+	pointer-events: none;
+	position: absolute;
+	display: none;
+	opacity: 0;
+}
+[tooltip]::before {
+	content: '';
+	border: 5px solid transparent;
+	z-index: 1001;
+}
+[tooltip]::after {
+	content: attr(tooltip);
+	font-family: Helvetica, sans-serif;
+	text-align: center;
+	min-width: 3em;
+	max-width: 21em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 6px 8px;
+	border-radius: 6px;
+	background: #333;
+	color: #fff;
+	z-index: 1000;
+}
+
+/* Make the tooltips respond to hover */
+[tooltip]:hover::before,
+[tooltip]:hover::after {
+	display: block;
+}
+
+/* don't show empty tooltips */
+[tooltip='']::before,
+[tooltip='']::after {
+	display: none !important;
+}
+
+/* FLOW: UP */
+[tooltip]:not([flow])::before,
+[tooltip][flow^="up"]::before {
+	bottom: 100%;
+	border-bottom-width: 0;
+	border-top-color: #333;
+}
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::after {
+	bottom: calc(100% + 5px);
+}
+[tooltip]:not([flow])::before,
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::before,
+[tooltip][flow^="up"]::after {
+	left: 50%;
+	transform: translate(-50%, -.5em);
+}
+/*End Tooltips*/
+/* KEYFRAMES */
+@keyframes tooltips-vert {
+	to {
+		opacity: 1;
+		transform: translate(-50%, 0);
+	}
+}
+
+@keyframes tooltips-horz {
+	to {
+		opacity: 1;
+		transform: translate(0, -50%);
+	}
+}
+@-webkit-keyframes typing {
+	from {
+		width: 0
+	}
+	to {
+		width: 14.17em
+	}
+}
+
+@keyframes typing {
+	from {
+		width: 0
+	}
+	to {
+		width: 14.17em
+	}
+}
+
+/* FX All The Things */
+[tooltip]:not([flow]):hover::before,
+[tooltip]:not([flow]):hover::after,
+[tooltip][flow^="up"]:hover::before,
+[tooltip][flow^="up"]:hover::after,
+[tooltip][flow^="down"]:hover::before,
+[tooltip][flow^="down"]:hover::after {
+	animation: tooltips-vert 300ms ease-out forwards;
+}
+
+[tooltip][flow^="left"]:hover::before,
+[tooltip][flow^="left"]:hover::after,
+[tooltip][flow^="right"]:hover::before,
+[tooltip][flow^="right"]:hover::after {
+	animation: tooltips-horz 300ms ease-out forwards;
+}
 
 @media all and (max-width: 1179px) {
 	.container {

@@ -1,3 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21">
-    <path fill="#FFF" fill-rule="nonzero" d="M9.92 8h1.985V5h2.976V3h-2.976V0H9.92v3H6.944v2h2.977v3zm-3.968 9c-1.09 0-1.984.9-1.984 2s.893 2 1.984 2c1.092 0 1.985-.9 1.985-2s-.893-2-1.985-2zm9.921 0c-1.091 0-1.984.9-1.984 2s.893 2 1.984 2 1.984-.9 1.984-2-.893-2-1.984-2zm-9.752-3.25l.03-.12.893-1.63h7.39c.745 0 1.4-.41 1.737-1.03L20 3.96 18.274 3h-.01l-1.091 2-2.738 5H7.47l-.129-.27L5.12 5l-.942-2-.933-2H0v2h1.984l3.572 7.59-1.34 2.45A1.998 1.998 0 0 0 5.952 16h11.905v-2H6.37a.253.253 0 0 1-.248-.25z"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 20 21" style="enable-background:new 0 0 20 21;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<title>cart</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="freken-full" transform="translate(-359.000000, -525.000000)">
+		<g id="Group-3" transform="translate(150.000000, 196.000000)">
+			<g id="Group-2" transform="translate(197.000000, 317.000000)">
+				<g id="cart-plus" transform="translate(12.000000, 12.000000)">
+					<path id="cart" class="st0" d="M9.9,8h2V5h3V3h-3V0h-2v3h-3v2h3V8z M6,17c-1.1,0-2,0.9-2,2s0.9,2,2,2s2-0.9,2-2S7,17,6,17L6,17
+						z M15.9,17c-1.1,0-2,0.9-2,2s0.9,2,2,2c1.1,0,2-0.9,2-2S17,17,15.9,17L15.9,17z M6.1,13.8l0-0.1L7,12h7.4c0.7,0,1.4-0.4,1.7-1
+						L20,4l-1.7-1h0l-1.1,2l-2.7,5h-7L7.3,9.7L5.1,5L4.2,3L3.2,1H0v2h2l3.6,7.6L4.2,13C4.1,13.3,4,13.6,4,14c0,1.1,0.9,2,2,2h11.9
+						v-2H6.4C6.2,14,6.1,13.9,6.1,13.8z"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
 </svg>
