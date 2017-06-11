@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Freken Shop</title>
+	<meta name="description" content="Help creators and start-ups materialise their ideas in digital and real world" />
+	<meta name="keywords" content="Front and Back-end Developers, iOS and Android Developers, Illustrators, Animators, Managers, Creatives, Experience Designers, UI Designers, Web Developers, Front and Back-end Developers, iOS and Android Developers, Illustrators, Animators, Managers, Creatives, Experience Designers, UI Designers, Web Developers" />
+	<meta name="author" content="Yurii Vlasenko-Lutskii" />
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css?3">
+</head>
+<body>
+
+<header>
+	<div class="container text-center">
+		<h1 class="logo">
+			<a href="#"><span data-hover="Freken">Freken</span></a>
+		</h1>
+		<div class="page-desc">The future is here. Right here.</div>
+		<nav>
+			<ul>
+				<li>
+					<a href="#"><span data-hover="Free resources">Free resources</span></a>
+				</li>
+				<li>
+					<a href="#"><span data-hover="About">About</span></a>
+				</li>
+				<li>
+					<a href="#"><span data-hover="Contact us">Contact us</span></a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<main>
+	<section>
+
+		<div class="container">
+			<div class="block">
+				<div class="slick-slider">
+					<div class="slick-slider-init">
+						<div class="slick-item">
+							<div class="row">
+								<div class="col col-50">
+
+									<div class="slider-description" data-animation-in="fadeIn">
+										<div class="cat-name">Robots</div>
+										<h2>Ozobot</h2>
+									</div>
+
+									<div class="slider-content">
+										<p>Följande ingar</p>
+										<p>1 Ozobot</p>
+										<p>2st fria appar samt webbresurser</p>
+
+										<ul class="poduct-actions">
+											<li><div class="btn product-price">690 kr<span>+ tax</span></div></li>
+											<li><a href="#" class="cart"><img src="img/cart.svg" alt="cart"></a></li>
+											<li></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col col-50">
+									<div class=" slider-prod-img" data-animation-in="bounceInRight">
+										<img src="img/slider/ozobot.png" alt="ozobot">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slick-item">
+
+							<div class="slider-headline" data-animation-in="bounceInDown">
+								<h1>Headline FadeIn</h1>
+							</div>
+
+							<div class="slider-description" data-animation-in="fadeIn">
+								<h3>Slide 2</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+</main>
+<footer>
+	<div class="container">
+
+	</div>
+</footer>
+<script src="js/jquery.min.js"></script>
+<script src="js/libs.min.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var sliderInit = $('.slick-slider-init');
+
+	$(document).ready(function () {
+
+		sliderInit.slick({
+			autoplay: false,
+			arrows: false,
+			dots: true,
+			swipe: false,
+			autoplaySpeed: 9000
+		});
+
+		sliderInit.slickAnimation();
+	});
+</script>
+</body>
+</html>
